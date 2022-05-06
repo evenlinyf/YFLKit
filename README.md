@@ -1,6 +1,6 @@
 # YFLKit
 
-[![CI Status](https://img.shields.io/travis/Even Lin/YFLKit.svg?style=flat)](https://travis-ci.org/Even Lin/YFLKit)
+[![CI Status](https://img.shields.io/travis/evenlinyf/YFLKit.svg?style=flat)](https://travis-ci.org/evenlinyf/YFLKit)
 [![Version](https://img.shields.io/cocoapods/v/YFLKit.svg?style=flat)](https://cocoapods.org/pods/YFLKit)
 [![License](https://img.shields.io/cocoapods/l/YFLKit.svg?style=flat)](https://cocoapods.org/pods/YFLKit)
 [![Platform](https://img.shields.io/cocoapods/p/YFLKit.svg?style=flat)](https://cocoapods.org/pods/YFLKit)
