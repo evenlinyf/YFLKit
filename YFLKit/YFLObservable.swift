@@ -7,11 +7,11 @@
 
 import Foundation
 
-class YFLObservable<T> {
+public class YFLObservable<T> {
    
-    typealias Listener = (T?) -> Void
+    public typealias Listener = (T?) -> Void
     
-    var value: T? {
+    public var value: T? {
         didSet {
             listeners.forEach { $0(value) }
         }
@@ -19,13 +19,13 @@ class YFLObservable<T> {
     
     private init() {}
     
-    init(_ value: T?) {
+    public init(_ value: T?) {
         self.value = value
     }
     
     private var listeners: [Listener] = []
     
-    func bind(_ listener: @escaping Listener) {
+    public func bind(_ listener: @escaping Listener) {
         listener(value)
         listeners.append(listener)
     }

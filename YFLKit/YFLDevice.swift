@@ -8,7 +8,7 @@
 import UIKit
 import Foundation
 
-struct YFDevice {
+public struct YFLDevice {
     
     public static var screenSize: String {
         return "\(UIScreen.main.bounds.size.height)*\(UIScreen.main.bounds.size.width)"
@@ -231,7 +231,7 @@ struct YFDevice {
 }
 
 //MARK: Locale
-extension YFDevice {
+extension YFLDevice {
     
     //en_US(英文)、zh-Hant_US (繁体中文)，zh-Hans_US(简体中文)
     public static var locale: String {

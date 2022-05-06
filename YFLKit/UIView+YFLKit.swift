@@ -189,4 +189,23 @@ extension YFLWrapper where Base: UIView {
         base.layer.shadowColor = color.cgColor
         base.layer.shadowRadius = radius
     }
+    
+    
+    /// 设置在Autolayout中是否可压缩
+    /// - Parameters:
+    ///   - isCompressible: 是否可压缩
+    ///   - axis: 方向 Axis
+    public func setCompressible(_ isCompressible: Bool, for axis: NSLayoutConstraint.Axis) {
+        base.setContentCompressionResistancePriority(UILayoutPriority(rawValue: isCompressible ? 1 : 1000), for: axis)
+    }
+    
+    
+    /// 设置在Autolayout中是否可拉伸
+    /// - Parameters:
+    ///   - isStretchable: 是否可拉伸
+    ///   - axis: 方向 Axis
+    public func setStretchable(_ isStretchable: Bool, for axis: NSLayoutConstraint.Axis) {
+        base.setContentHuggingPriority(UILayoutPriority(rawValue: isStretchable ? 1 : 1000), for: axis)
+    }
+    
 }

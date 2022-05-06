@@ -1,15 +1,22 @@
 PODS:
-  - YFLKit (0.1.0)
+  - SnapKit (4.2.0)
+  - YFLKit (0.1.0):
+    - SnapKit
 
 DEPENDENCIES:
   - YFLKit (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - SnapKit
 
 EXTERNAL SOURCES:
   YFLKit:
     :path: "../"
 
 SPEC CHECKSUMS:
-  YFLKit: 7ebef15db3cde071f97a097625d324461135ec0e
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  YFLKit: abf38ad02dc7ce7b0cc05cba3dbf86ce56413db2
 
 PODFILE CHECKSUM: 965f9ce46fd25282cd34ce00757dac9663b1f9e9
 
