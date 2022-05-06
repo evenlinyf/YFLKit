@@ -1,0 +1,6 @@
+use_frameworks!
+target 'YFLKit_Tests' do
+  pod 'YFLKit', :path => '../'
+  
+  
+end
