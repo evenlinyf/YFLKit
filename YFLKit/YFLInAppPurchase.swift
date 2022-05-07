@@ -8,8 +8,6 @@
 import UIKit
 import StoreKit
 
-let IAP = YFLInAppPurchase.shared
-
 public enum IAPResult {
     case success(_ transaction: (productId: String, purchaseDate: String, receipt: String, transactionId: String))
     case failed(_ error: YFLError?)
@@ -35,7 +33,7 @@ public class YFLInAppPurchase: NSObject {
         return SKPaymentQueue.canMakePayments()
     }
     
-    func purchaseProduct(_ productId: String, complete: @escaping (IAPResult) -> Void) {
+    public func purchaseProduct(_ productId: String, complete: @escaping (IAPResult) -> Void) {
         YFLog("🍎 🍎 🍎 调用苹果内购买 productId = >>>>>>\(productId)<<<<<<")
         let receiptUrl = Bundle.main.appStoreReceiptURL
         YFLog(receiptUrl)
