@@ -199,6 +199,16 @@ extension YFLWrapper where Base: UIView {
         base.setContentCompressionResistancePriority(UILayoutPriority(rawValue: isCompressible ? 1 : 1000), for: axis)
     }
     
+    /** 各个 UILayoutPriority 的 rawValue
+     
+     - UILayoutPriority.required = 1000.0
+     - UILayoutPriority.defaultHigh = 750.0
+     - UILayoutPriority.dragThatCanResizeScene = 510.0
+     - UILayoutPriority.sceneSizeStayPut = 500.0
+     - UILayoutPriority.dragThatCannotResizeScene = 490.0
+     - UILayoutPriority.defaultLow = 250.0
+     - UILayoutPriority.fittingSizeLevel = 50.0
+     **/
     
     /// 设置在Autolayout中是否可拉伸
     /// - Parameters:
