@@ -22,8 +22,26 @@ extension YFLWrapper where Base: UILabel {
     }
     
     @discardableResult
-    public func textColor(_ color: UIColor) -> Self {
+    public func color(_ color: UIColor) -> Self {
         base.textColor = color
+        return self
+    }
+    
+    @discardableResult
+    public func backgroundColor(_ color: UIColor) -> Self {
+        base.backgroundColor = color
+        return self
+    }
+    
+    @discardableResult
+    public func numberOfLines(_ count: Int) -> Self {
+        base.numberOfLines = count
+        return self
+    }
+    
+    @discardableResult
+    public func alignment(_ alignment: NSTextAlignment) -> Self {
+        base.textAlignment = alignment
         return self
     }
     

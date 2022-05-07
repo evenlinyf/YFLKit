@@ -1,6 +1,6 @@
 PODS:
   - SnapKit (4.2.0)
-  - YFLKit (0.1.0):
+  - YFLKit (0.1.1):
     - SnapKit
 
 DEPENDENCIES:
@@ -16,7 +16,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  YFLKit: abf38ad02dc7ce7b0cc05cba3dbf86ce56413db2
+  YFLKit: b1cc54ef9f541db54e00db9b772cb1c39a5b8102
 
 PODFILE CHECKSUM: 965f9ce46fd25282cd34ce00757dac9663b1f9e9
 

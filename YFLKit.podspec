@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YFLKit'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A simple library for build a simple app.'
 
 # This description is used to generate tags and improve search results.
@@ -22,12 +22,9 @@ Pod::Spec.new do |s|
                        DESC
 
   s.homepage         = 'https://github.com/evenlinyf/YFLKit'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Even Lin' => 'evenlinyf@gmail.com' }
   s.source           = { :git => 'https://github.com/evenlinyf/YFLKit.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
   s.ios.deployment_target = '12.0'
   s.swift_versions = ['5.0']
   s.requires_arc = true

@@ -1,6 +1,6 @@
 {
   "name": "YFLKit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "A simple library for build a simple app.",
   "description": "YFLKit is my swift tool box for building an app, specifically, some useful extensions, chaining functions, helper tools etc.",
   "homepage": "https://github.com/evenlinyf/YFLKit",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/evenlinyf/YFLKit.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1"
   },
   "platforms": {
     "ios": "12.0"
