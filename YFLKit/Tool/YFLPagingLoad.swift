@@ -7,7 +7,7 @@
 
 import Foundation
 
-class YFLPagingLoad: NSObject {
+public class YFLPagingLoad: NSObject {
     
     public enum Status {
         case empty

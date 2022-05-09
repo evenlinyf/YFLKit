@@ -10,7 +10,7 @@ import UIKit
 extension YFLWrapper where Base: UILabel {
     
     @discardableResult
-    public func title(_ title: String) -> Self {
+    public func title(_ title: String?) -> Self {
         base.text = title
         return self
     }
@@ -22,13 +22,13 @@ extension YFLWrapper where Base: UILabel {
     }
     
     @discardableResult
-    public func color(_ color: UIColor) -> Self {
+    public func color(_ color: UIColor?) -> Self {
         base.textColor = color
         return self
     }
     
     @discardableResult
-    public func backgroundColor(_ color: UIColor) -> Self {
+    public func backgroundColor(_ color: UIColor?) -> Self {
         base.backgroundColor = color
         return self
     }
