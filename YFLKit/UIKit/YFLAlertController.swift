@@ -554,9 +554,9 @@ extension YFLAlertController {
         let line = UIView(frame: CGRect(x: 0, y: 0, width: contentWidth!, height: lineWidth))
         line.backgroundColor = UIColor(hex: 0xEDEDED)
         if vertical {
-            line.frame = CGRect(x: 0, y: 0, width: contentWidth!, height: lineWidth)
-        } else {
             line.frame = CGRect(x: 0, y: 0, width: lineWidth, height: 40)
+        } else {
+            line.frame = CGRect(x: 0, y: 0, width: contentWidth!, height: lineWidth)
         }
         return line
     }
@@ -619,7 +619,7 @@ extension YFLAlertController {
         let confirmBtn = YFLButton(style: .full)
         confirmBtn.yfl
             .font(size: 14, color: .white)
-            .backgroundColor(UIColor(named: "background"))//TODO: 怎么自定义， 暂时需要增加ColorSet name： background
+            .backgroundColor(UIColor(named: "theme"))//TODO: 怎么自定义， 暂时需要增加ColorSet name： background
             .title(actionTitle)
         
         let confirmAction = YFLAlertAction(button: confirmBtn) {

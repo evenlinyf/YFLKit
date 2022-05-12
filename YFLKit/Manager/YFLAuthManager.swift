@@ -11,6 +11,10 @@ import AVFoundation
 
 public struct YFLAuthManager {
     
+    public init() {
+        
+    }
+    
     /// 获取相机麦克风权限状态
     /// - Parameter mediaType: 相机 .video 麦克风 .audio
     /// - Returns: status
