@@ -18,13 +18,12 @@ public class YFLAlertAction: NSObject {
         self.handler = handler
     }
     
-    convenience init(title: String, image: UIImage? = nil, style: YFLButton.Style = .normal, handler: YFLComplete.V?) {
+    public convenience init(title: String, image: UIImage? = nil, style: YFLButton.Style = .normal, handler: YFLComplete.V?) {
         let button = YFLButton(style: style)
         button.yfl
             .title(title)
             .image(image)
             .image(image, state: .highlighted)
-            .backgroundColor(UIColor(named: "theme"))
             .font(size: 14, color: handler == nil ? UIColor.lightGray : UIColor.darkGray)
         self.init(button: button, handler: handler)
     }
