@@ -248,6 +248,18 @@ extension YFLDevice {
         return ""
     }
     
+    /// 语言代码
+    /// - Parameter zhHant: 自定义的繁体中文代码， 默认 cht ， 可自定义tw等
+    public static func languageCode(scriptCodeMap: [String: String] = ["Hant": "cht"]) -> String {
+        if let code = NSLocale.current.languageCode {
+            if let value = scriptCodeMap[scriptCode] {
+                return value
+            }
+            return code
+        }
+        return ""
+    }
+    
     public static var isChinaMainland: Bool {
         return languageCode == "zh"
     }

@@ -75,6 +75,7 @@ extension NSMutableAttributedString {
         return self
     }
     
+    @discardableResult
     public func addDeleteLine(color: UIColor = .lightGray) -> NSMutableAttributedString {
 //        let style = NSUnderlineStyle(rawValue: NSUnderlineStyle.single.rawValue|NSUnderlineStyle.solid.rawValue)
         self.addAttributes([NSAttributedString.Key.strikethroughColor: color, NSAttributedString.Key.strikethroughStyle: NSUnderlineStyle.single.rawValue], range: NSMakeRange(0, self.length))
