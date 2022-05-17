@@ -89,6 +89,7 @@ public class YFLAlertController: UIViewController {
         label.yfl
             .color(.darkGray)
             .font(size: 15, isBold: true)
+            .numberOfLines(0)
             .alignment(.center)
         textContent.addSubview(label)
         label.snp.makeConstraints { make in
@@ -104,6 +105,7 @@ public class YFLAlertController: UIViewController {
         let detailLabel = UILabel()
         detailLabel.yfl
             .color(.lightGray)
+            .numberOfLines(0)
             .font(size: 13)
         textDetailContent.addSubview(detailLabel)
         detailLabel.snp.makeConstraints { make in
@@ -194,7 +196,7 @@ public class YFLAlertController: UIViewController {
         }
         
         cancelButton.contentMode = .scaleAspectFit
-//        cancelButton.setImage(UIImage(named: "icClose")?.yfl.tint(UIColor.lightGray), for: .normal)
+        cancelButton.setImage(UIImage(named: "icClose"), for: .normal)
         alertContentView.addSubview(cancelButton)
         cancelButton.snp.makeConstraints { make in
             make.right.top.equalTo(0)

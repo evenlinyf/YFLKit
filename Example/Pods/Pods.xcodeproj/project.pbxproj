@@ -71,6 +71,8 @@
 		C58C720267EA5DF544DC2AD0B566BBE4 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A01579446220734077B04893304BDE1 /* Container.swift */; };
 		CF3A111560E280F995BB02D9F138EB5B /* NSMutableAttributedString+YFLKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69DCDFBE1D7742A76DD13C91D6609DC /* NSMutableAttributedString+YFLKit.swift */; };
 		D1358B6D159F763905F528B0C9C1DD3C /* YFLObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBC3EE8C576187402B943CD8FC21140 /* YFLObservable.swift */; };
+		D30EE94F28322A0D0062D952 /* UITextField+YFLKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30EE94E28322A0D0062D952 /* UITextField+YFLKit.swift */; };
+		D394E8322833A9C40030B767 /* NSObject+YFLKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D394E8312833A9C40030B767 /* NSObject+YFLKit.swift */; };
 		D472CFED0C28DB8258BB4E132F4A7EA4 /* YFLKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 705E5948E3D8DBE8C4471EA2ED61EEC3 /* YFLKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D78F6A95A088F7E619745556DAFE9E0A /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887F5BC85E664CAF1EAD58DB6EF027D /* ConstraintMakerRelatable.swift */; };
 		D866D7312E755D6D31B419B3BB923485 /* YFLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927C7BE4059B886B4FFCA969948A020E /* YFLError.swift */; };
@@ -145,7 +147,7 @@
 		5975457FA577D667D0257900DF1D4FDD /* ConstraintView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintView+Extensions.swift"; path = "Source/ConstraintView+Extensions.swift"; sourceTree = "<group>"; };
 		618CE74B1A894367BEBBA6F593253DE5 /* YFLAlertAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = YFLAlertAction.swift; sourceTree = "<group>"; };
 		6199B0E33536DD7E23A71C2A1DFA3CB3 /* ConstraintPriorityTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriorityTarget.swift; path = Source/ConstraintPriorityTarget.swift; sourceTree = "<group>"; };
-		656645D61C1C15E90D66CAFE1E2C1C84 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		656645D61C1C15E90D66CAFE1E2C1C84 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		67E32E38B3BCB06694AA72FCE53C4ED1 /* YFLTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = YFLTextField.swift; sourceTree = "<group>"; };
 		6A01579446220734077B04893304BDE1 /* Container.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		6B04061EC763045AF5BB99E042EB4A75 /* Pods-YFLKit_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YFLKit_Tests-frameworks.sh"; sourceTree = "<group>"; };
@@ -176,9 +178,9 @@
 		979486118B3E90C08386079D57962701 /* SnapKit */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SnapKit; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		998F8E40A3B957937B731426ED430A17 /* CGRect+YFLKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "CGRect+YFLKit.swift"; sourceTree = "<group>"; };
 		9A373E4F6A1787C58CBD85B360C949F9 /* UILabel+YFLKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UILabel+YFLKit.swift"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A176ABD83CFE303DE3E05B36E4DEAAB3 /* Date+YFLKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Date+YFLKit.swift"; sourceTree = "<group>"; };
-		A2EA52753D80C6D9CC4C11D1FBB74B3F /* YFLKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = YFLKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A2EA52753D80C6D9CC4C11D1FBB74B3F /* YFLKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = YFLKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A3499D06B7741051669EFC6E6A929A57 /* ConstraintConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConfig.swift; path = Source/ConstraintConfig.swift; sourceTree = "<group>"; };
 		A3C117A9ECC0FBC88A5E5FB09AA0FF6D /* Gallery.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Gallery.swift; sourceTree = "<group>"; };
 		AB1B5C574EC29B2A222C6281A4A0B3BC /* SnapKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnapKit-dummy.m"; sourceTree = "<group>"; };
@@ -196,8 +198,10 @@
 		C8D6B4E640B3D09C454814F36856E2EE /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupport.swift; path = Source/ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
 		CC9F020152EBA157850795A5A5486216 /* Pods-YFLKit_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-YFLKit_Tests"; path = Pods_YFLKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0D8610217E033F12A628571FD3D1684 /* Typealiases.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Typealiases.swift; path = Source/Typealiases.swift; sourceTree = "<group>"; };
+		D30EE94E28322A0D0062D952 /* UITextField+YFLKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+YFLKit.swift"; sourceTree = "<group>"; };
+		D394E8312833A9C40030B767 /* NSObject+YFLKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+YFLKit.swift"; sourceTree = "<group>"; };
 		D3DD21F59E9ABB6CFA8B14FAEE0B52DA /* ConstraintMakerPriortizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerPriortizable.swift; path = Source/ConstraintMakerPriortizable.swift; sourceTree = "<group>"; };
-		D4D44F77CE9061F96FA9D6F92F92701F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		D4D44F77CE9061F96FA9D6F92F92701F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D68B41F41D16AA7D0CD5F7E59367C510 /* Pods-YFLKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YFLKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		D6CCC4C050B0F6A551C6B091575A89DB /* UIEdgeInsets+YFLKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+YFLKit.swift"; sourceTree = "<group>"; };
 		D79D09B50EC6253FDFA9B12DA55C513C /* UIImage+YFLKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIImage+YFLKit.swift"; sourceTree = "<group>"; };
@@ -412,7 +416,6 @@
 				4DCD15E7A2AFE53263B4335C9B3D9813 /* UILayoutSupport+Extensions.swift */,
 				D28E246011041898C1EA6C3AAF01971C /* Support Files */,
 			);
-			name = SnapKit;
 			path = SnapKit;
 			sourceTree = "<group>";
 		};
@@ -482,11 +485,13 @@
 			isa = PBXGroup;
 			children = (
 				998F8E40A3B957937B731426ED430A17 /* CGRect+YFLKit.swift */,
+				D394E8312833A9C40030B767 /* NSObject+YFLKit.swift */,
 				A176ABD83CFE303DE3E05B36E4DEAAB3 /* Date+YFLKit.swift */,
 				E69DCDFBE1D7742A76DD13C91D6609DC /* NSMutableAttributedString+YFLKit.swift */,
 				6ED5A44B774D0E0635F3250C207CACEF /* String+YFLKit.swift */,
 				AF638B5314561CC3A48CEDACA756A7AB /* UIApplication+YFLKit.swift */,
 				9753162EB2EEA507B70A1855645B8137 /* UIButton+YFLKit.swift */,
+				D30EE94E28322A0D0062D952 /* UITextField+YFLKit.swift */,
 				D6CCC4C050B0F6A551C6B091575A89DB /* UIEdgeInsets+YFLKit.swift */,
 				D79D09B50EC6253FDFA9B12DA55C513C /* UIImage+YFLKit.swift */,
 				9A373E4F6A1787C58CBD85B360C949F9 /* UILabel+YFLKit.swift */,
@@ -646,6 +651,7 @@
 				65BEBB328631C2907F65B349A7FCB514 /* CGRect+YFLKit.swift in Sources */,
 				F4C87B31FF9DEFCBA964293EAC9F1DD0 /* Column.swift in Sources */,
 				C58C720267EA5DF544DC2AD0B566BBE4 /* Container.swift in Sources */,
+				D394E8322833A9C40030B767 /* NSObject+YFLKit.swift in Sources */,
 				3D35D839A44509C2C92B2FF5B27DBD12 /* Date+YFLKit.swift in Sources */,
 				56F161EDD10641FA52972D4DCB013E14 /* Expanded.swift in Sources */,
 				DC8E468EE23FDE04BBBB4526EA3EC4B9 /* Gallery.swift in Sources */,
@@ -678,6 +684,7 @@
 				711A592362CE9DCDB6A5418B2A04B5ED /* YFLogger.swift in Sources */,
 				B666FAED97A626EAE5DAAEB9A267FC7D /* YFLPagingLoad.swift in Sources */,
 				46FBA084AB4A233C0C2376C48A5B57FB /* YFLScreenMonitor.swift in Sources */,
+				D30EE94F28322A0D0062D952 /* UITextField+YFLKit.swift in Sources */,
 				B6D779BC8EA4E2D8367C04FBB1CD970D /* YFLTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -941,8 +948,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
