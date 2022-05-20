@@ -8,7 +8,7 @@
 import Foundation
 
 extension NSObject {
-    static var reuseIdentifier: String {
+    public static var reuseIdentifier: String {
         return String(describing: classForCoder()) + "ReuseID"
     }
 }
