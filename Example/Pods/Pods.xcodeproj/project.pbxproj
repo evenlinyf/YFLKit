@@ -72,6 +72,7 @@
 		CF3A111560E280F995BB02D9F138EB5B /* NSMutableAttributedString+YFLKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69DCDFBE1D7742A76DD13C91D6609DC /* NSMutableAttributedString+YFLKit.swift */; };
 		D1358B6D159F763905F528B0C9C1DD3C /* YFLObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBC3EE8C576187402B943CD8FC21140 /* YFLObservable.swift */; };
 		D30EE94F28322A0D0062D952 /* UITextField+YFLKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30EE94E28322A0D0062D952 /* UITextField+YFLKit.swift */; };
+		D31ECD71283B871B00D54810 /* YFLAlertConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31ECD70283B871B00D54810 /* YFLAlertConfig.swift */; };
 		D394E8322833A9C40030B767 /* NSObject+YFLKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D394E8312833A9C40030B767 /* NSObject+YFLKit.swift */; };
 		D472CFED0C28DB8258BB4E132F4A7EA4 /* YFLKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 705E5948E3D8DBE8C4471EA2ED61EEC3 /* YFLKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D78F6A95A088F7E619745556DAFE9E0A /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887F5BC85E664CAF1EAD58DB6EF027D /* ConstraintMakerRelatable.swift */; };
@@ -199,6 +200,7 @@
 		CC9F020152EBA157850795A5A5486216 /* Pods-YFLKit_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-YFLKit_Tests"; path = Pods_YFLKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0D8610217E033F12A628571FD3D1684 /* Typealiases.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Typealiases.swift; path = Source/Typealiases.swift; sourceTree = "<group>"; };
 		D30EE94E28322A0D0062D952 /* UITextField+YFLKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+YFLKit.swift"; sourceTree = "<group>"; };
+		D31ECD70283B871B00D54810 /* YFLAlertConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YFLAlertConfig.swift; sourceTree = "<group>"; };
 		D394E8312833A9C40030B767 /* NSObject+YFLKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+YFLKit.swift"; sourceTree = "<group>"; };
 		D3DD21F59E9ABB6CFA8B14FAEE0B52DA /* ConstraintMakerPriortizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerPriortizable.swift; path = Source/ConstraintMakerPriortizable.swift; sourceTree = "<group>"; };
 		D4D44F77CE9061F96FA9D6F92F92701F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -334,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				618CE74B1A894367BEBBA6F593253DE5 /* YFLAlertAction.swift */,
+				D31ECD70283B871B00D54810 /* YFLAlertConfig.swift */,
 				3796FBBFD9703CE0B4E236C87594C2D1 /* YFLAlertController.swift */,
 				F38B8C8F9DE5B47B5DD28B3EE9EBE496 /* YFLButton.swift */,
 				67E32E38B3BCB06694AA72FCE53C4ED1 /* YFLTextField.swift */,
@@ -679,6 +682,7 @@
 				E2200C3ABC22D1DB516DEF746A2F9DDC /* YFLFeedBack.swift in Sources */,
 				1EF4CCD533294D7FE7B8A587FA892C35 /* YFLInAppPurchase.swift in Sources */,
 				44F7B53A70C1F8E3E3B9E778240F85AF /* YFLKit.swift in Sources */,
+				D31ECD71283B871B00D54810 /* YFLAlertConfig.swift in Sources */,
 				F1ED392C8AB42094FBC1698D15D89AE0 /* YFLKit-dummy.m in Sources */,
 				D1358B6D159F763905F528B0C9C1DD3C /* YFLObservable.swift in Sources */,
 				711A592362CE9DCDB6A5418B2A04B5ED /* YFLogger.swift in Sources */,

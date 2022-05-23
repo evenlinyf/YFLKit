@@ -196,7 +196,11 @@ public class YFLAlertController: UIViewController {
         }
         
         cancelButton.contentMode = .scaleAspectFit
-        cancelButton.setImage(UIImage(named: "icClose"), for: .normal)
+        if let cancelImage = YFLAlertConfig.cancelImage {
+            cancelButton.setImage(cancelImage, for: .normal)
+        } else {
+            cancelButton.yfl.title("×").font(size: 14, color: .lightGray)
+        }
         alertContentView.addSubview(cancelButton)
         cancelButton.snp.makeConstraints { make in
             make.right.top.equalTo(0)
@@ -425,30 +429,12 @@ extension YFLAlertController {
                         make.top.equalToSuperview()
                         make.centerX.equalToSuperview()
                         make.bottom.equalTo(-space)
-                        make.width.equalTo(contentWidth! * 0.618)
+                        make.width.equalTo(contentWidth! * YFLAlertConfig.buttonRatio)
                     } else {
                         make.edges.equalTo(UIEdgeInsets.zero)
                     }
                 }
             }
-            
-            //加两颗小心心
-//            if style == .roundedRect {
-//                let lhIV = UIImageView(image: UIImage(named: "sic_alert_heart_left"))
-//                actionContent.addSubview(lhIV)
-//                lhIV.snp.makeConstraints { make in
-//                    make.left.equalTo(3)
-//                    make.top.equalTo(0)
-//                }
-//
-//                let rhIV = UIImageView(image: UIImage(named: "sic_alert_heart_right"))
-//                actionContent.addSubview(rhIV)
-//                rhIV.snp.makeConstraints { make in
-//                    make.right.equalTo(-3)
-//                    make.bottom.equalTo(0)
-//                }
-//            }
-            
             return
         }
         
@@ -621,7 +607,7 @@ extension YFLAlertController {
         let confirmBtn = YFLButton(style: .full)
         confirmBtn.yfl
             .font(size: 14, color: .white)
-            .backgroundColor(UIColor(named: "theme"))//TODO: 怎么自定义， 暂时需要增加ColorSet name： background
+            .backgroundColor(YFLAlertConfig.themeColor)
             .title(actionTitle)
         
         let confirmAction = YFLAlertAction(button: confirmBtn) {
