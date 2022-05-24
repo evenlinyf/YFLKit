@@ -20,10 +20,10 @@ public class YFLAudioManager: NSObject {
     private var avPlayer: AVPlayer?
     
     /// 录制结束回调
-    private var complete: YFLComplete.B?
+    private var complete: CompleteB?
     
     /// 播放结束回调
-    private var playComplete: YFLComplete.B?
+    private var playComplete: CompleteB?
     
     /// 音频Session设置
     private func audioSessionConfig() {
@@ -54,7 +54,7 @@ extension YFLAudioManager {
     
     /// 开始录制音频
     /// - Parameter complete: delegate 录制结束回调
-    public func startRecord(complete: YFLComplete.B?) {
+    public func startRecord(complete: CompleteB?) {
         guard let url = URL(string: pathForRecordFile()) else {return}
         guard let format = AVAudioFormat(standardFormatWithSampleRate: 44100, channels: 1) else { return }
         self.complete = complete
@@ -100,7 +100,7 @@ extension YFLAudioManager {
     
     /// 播放录音文件
     /// - Parameter complete: 播放结束回调
-    public func playRecord(complete: YFLComplete.B?) {
+    public func playRecord(complete: CompleteB?) {
         guard let fileUrl = URL(string: pathForRecordFile()) else { return }
         playRecord(url: fileUrl, complete: complete)
     }
@@ -110,7 +110,7 @@ extension YFLAudioManager {
     /// - Parameters:
     ///   - url: 音频路径
     ///   - complete: 播放完成回调
-    public func playRecord(url: URL?, complete: YFLComplete.B?) {
+    public func playRecord(url: URL?, complete: CompleteB?) {
         guard let fileUrl = url else { return }
         self.playComplete = complete
         if fileUrl.absoluteString.hasPrefix("http") {

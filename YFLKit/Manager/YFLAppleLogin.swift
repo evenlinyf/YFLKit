@@ -17,9 +17,9 @@ public class YFLAppleLogin: NSObject {
     private var signInWithAppleController: ASAuthorizationController!
     
     private var success: SignInWithAppleSuccessBlock?
-    private var fail: YFLComplete.V?
+    private var fail: CompleteV?
     
-    public func signInWithApple(in viewController: UIViewController, success: SignInWithAppleSuccessBlock?, failed: YFLComplete.V?) {
+    public func signInWithApple(in viewController: UIViewController, success: SignInWithAppleSuccessBlock?, failed: CompleteV?) {
         self.viewController = viewController
         self.success = success
         self.fail = failed

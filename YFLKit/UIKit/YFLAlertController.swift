@@ -79,7 +79,7 @@ public class YFLAlertController: UIViewController {
         return iv
     }()
     
-    private var cusDismissAction: YFLComplete.V?
+    private var cusDismissAction: CompleteV?
     
     public let textContent = UIView()
     
@@ -209,7 +209,7 @@ public class YFLAlertController: UIViewController {
         cancelButton.addTarget(self, action: #selector(dismissAction), for: .touchUpInside)
     }
     
-    public func setCancelAction(_ action: YFLComplete.V?) {
+    public func setCancelAction(_ action: CompleteV?) {
         self.cusDismissAction = action
     }
     

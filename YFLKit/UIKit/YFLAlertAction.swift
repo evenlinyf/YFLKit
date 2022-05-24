@@ -8,17 +8,18 @@
 import UIKit
 
 public class YFLAlertAction: NSObject {
+    
     public var button: YFLButton?
-    public var handler: YFLComplete.V?
+    public var handler: CompleteV?
     public var shouldAutoDismissAlert = true
     
-    public init(button: YFLButton?, handler: YFLComplete.V?) {
+    public init(button: YFLButton?, handler: CompleteV?) {
         super.init()
         self.button = button
         self.handler = handler
     }
     
-    public convenience init(title: String, image: UIImage? = nil, style: YFLButton.Style = .normal, handler: YFLComplete.V?) {
+    public convenience init(title: String, image: UIImage? = nil, style: YFLButton.Style = .normal, handler: CompleteV?) {
         let button = YFLButton(style: style)
         button.yfl
             .title(title)

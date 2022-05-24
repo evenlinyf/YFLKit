@@ -5,9 +5,7 @@
 //  Created by Even Lin on 2022/5/5.
 //
 
-public struct YFLComplete {
-    public typealias V = () -> Void
-    public typealias B = (Bool) -> Void
-    public typealias S = (String?) -> Void
-    public typealias T<T> = (T) -> Void
-}
+public typealias CompleteV = () -> Void
+public typealias CompleteB = (Bool) -> Void
+public typealias CompleteS = (String?) -> Void
+public typealias CompleteT<T> = (T) -> Void

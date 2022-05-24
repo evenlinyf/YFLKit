@@ -54,7 +54,7 @@ public class YFLButton: UIButton {
     
     private(set) var imagePosition: ImagePosition = .left
     private(set) var style: Style = .normal
-    private var action: YFLComplete.T<YFLButton>?
+    private var action: CompleteT<YFLButton>?
     
     public convenience init(style: Style?, imagePosition: ImagePosition? = .left) {
         self.init(type: .custom)
@@ -73,7 +73,7 @@ public class YFLButton: UIButton {
         self.setBackgroundImage(bgImage, for: state)
     }
     
-    public func setAction(_ action: @escaping YFLComplete.T<YFLButton>) {
+    public func setAction(_ action: @escaping CompleteT<YFLButton>) {
         self.removeTarget(self, action: #selector(clickAction(_:)), for: .touchUpInside)
         self.addTarget(self, action: #selector(clickAction(_:)), for: .touchUpInside)
         self.action = action

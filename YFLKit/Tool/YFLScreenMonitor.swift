@@ -16,7 +16,7 @@ public class YFLScreenMonitor: NSObject {
         case screenCaptured
     }
     
-    private var callBack: YFLComplete.T<UserActionType>?
+    private var callBack: CompleteT<UserActionType>?
     
     public override init() {
         super.init()
@@ -31,7 +31,7 @@ public class YFLScreenMonitor: NSObject {
     
     /// 开始监测截屏录屏事件
     /// - Parameter actionDetected: 截屏录屏事件回调
-    public func startMonitorScreen(_ actionDetected: YFLComplete.T<UserActionType>?) {
+    public func startMonitorScreen(_ actionDetected: CompleteT<UserActionType>?) {
         self.callBack = actionDetected
     }
     
