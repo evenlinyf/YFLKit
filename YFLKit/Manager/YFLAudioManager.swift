@@ -66,7 +66,7 @@ extension YFLAudioManager {
         }
         recorder?.delegate = self
         if recorder?.prepareToRecord() == true {
-            YFLog("⏺⏺⏺ 开始录制 >>> ")
+            YFLog("⏺⏺⏺ start record >>> ")
             recorder?.record(forDuration: 15)
         }
     }
@@ -90,7 +90,7 @@ extension YFLAudioManager: AVAudioRecorderDelegate {
     public func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         self.complete?(flag)
         if flag {
-            YFLog("⏺⏺⏺ 录制成功 🎉🎉🎉")
+            YFLog("⏺⏺⏺ record succeeded 🎉🎉🎉")
         }
     }
 }

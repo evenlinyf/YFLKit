@@ -13,8 +13,8 @@ public class Expanded: UIView {
         super.init(frame: frame)
         self.yfl.setStretchable(true, for: .horizontal)
         self.yfl.setStretchable(true, for: .vertical)
-        self.yfl.setCompressible(true, for: .horizontal)
-        self.yfl.setCompressible(true, for: .vertical)
+//        self.yfl.setCompressible(true, for: .horizontal)
+//        self.yfl.setCompressible(true, for: .vertical)
     }
     
     required init?(coder: NSCoder) {
