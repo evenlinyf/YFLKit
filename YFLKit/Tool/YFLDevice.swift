@@ -75,7 +75,6 @@ public struct YFLDevice {
         return uuidString
     }
     
-    
     /// isJailBroken
     public static var isJailBroken: Bool {
         var jailBroken = false
@@ -229,6 +228,13 @@ public struct YFLDevice {
     }
 
 }
+
+//import AdSupport
+//extension YFLDevice {
+//    public static var advertisingID: String {
+//        return ASIdentifierManager.shared().advertisingIdentifier.uuidString
+//    }
+//}
 
 //MARK: Locale
 extension YFLDevice {
