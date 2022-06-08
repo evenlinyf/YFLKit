@@ -122,7 +122,7 @@ extension YFLAudioManager {
     
     /// 是否正在播放音频
     /// - Returns: 返回Bool值
-    public func isPlaying() -> Bool {
+    public func isPlayingLocalAudio() -> Bool {
         return audioPlayer?.isPlaying ?? false
     }
     
