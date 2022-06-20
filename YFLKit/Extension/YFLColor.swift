@@ -12,10 +12,11 @@ extension UIColor: YFLCompatible {}
 extension YFLWrapper where Base: UIColor {
     
     public func toImage(size: CGSize) -> UIImage {
-        UIGraphicsBeginImageContext(size);
+        let fSize = CGSize(width: size.width > 0 ? size.width : 20, height: size.height > 0 ? size.height : 20)
+        UIGraphicsBeginImageContext(fSize);
         let context = UIGraphicsGetCurrentContext();
         context?.setFillColor(base.cgColor)
-        context?.fill(CGRect(x: 0, y: 0, width: size.width > 0 ? size.width : 20, height: size.height > 0 ? size.height : 20))
+        context?.fill(CGRect(origin: .zero, size: fSize))
         let image = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
         return image!;
