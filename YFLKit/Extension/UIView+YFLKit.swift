@@ -218,4 +218,10 @@ extension YFLWrapper where Base: UIView {
         base.setContentHuggingPriority(UILayoutPriority(rawValue: isStretchable ? 1 : 1000), for: axis)
     }
     
+    @discardableResult
+    public func frame(x: CGFloat = 0, y: CGFloat = 0, width: CGFloat, height: CGFloat) -> Self {
+        base.frame = CGRect(x: x, y: y, width: width, height: height)
+        return self
+    }
+    
 }
