@@ -20,6 +20,7 @@ public class Column: UIStackView {
     
     public func resizeChilds() {
         for child in self.arrangedSubviews {
+            if child is UILabel { continue }
             child.snp.makeConstraints { make in
                 if child.yfl.width > 0 {
                     make.width.equalTo(child.yfl.width)

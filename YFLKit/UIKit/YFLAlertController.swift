@@ -45,7 +45,7 @@ public class YFLAlertController: UIViewController {
     public var contentEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     
     /// Alert 圆角
-    public var cornerRadius: CGFloat = 12
+    public var cornerRadius: CGFloat?
     
     /// 自定义AlertContent位置, 请确保可以定位
     public var customPosition: UIEdgeInsets?
@@ -401,7 +401,7 @@ extension YFLAlertController {
             }
         }
         
-        alertContentView.layer.cornerRadius = cornerRadius
+        alertContentView.layer.cornerRadius = self.cornerRadius ?? YFLAlertConfig.cornerRadius
         alertContentView.layer.masksToBounds = false
         
         if self.tapToDismiss {

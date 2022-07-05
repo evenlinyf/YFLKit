@@ -19,4 +19,7 @@ public struct YFLAlertConfig {
     /// 确认按钮所占contentWidth的宽度
     public static var buttonRatio: CGFloat = 0.618
     
+    /// 圆角
+    public static var cornerRadius: CGFloat = 12
+    
 }
