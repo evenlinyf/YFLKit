@@ -11,6 +11,12 @@ import CommonCrypto
 
 extension String: YFLCompatibleValue {}
 
+extension String {
+    var localized: String {
+        return NSLocalizedString(self, comment: "")
+    }
+}
+
 extension YFLWrapper where Base == String {
     
     public func securedName(_ showCount: Int = 1) -> String {

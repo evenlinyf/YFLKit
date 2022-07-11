@@ -27,17 +27,48 @@ extension YFLWrapper where Base: UIColor {
 
 extension UIColor {
     
-    public convenience init(hex: UInt32) {
+    public convenience init(hex: UInt64) {
         let r: CGFloat = CGFloat((hex & 0xFF0000) >> 16) / 255.0
         let g: CGFloat = CGFloat((hex & 0x00FF00) >> 8) / 255.0
         let b: CGFloat = CGFloat(hex & 0x0000FF) / 255.0
         self.init(red: r, green: g, blue: b, alpha: 1)
     }
     
-    public convenience init(hex:UInt32, alpha:CGFloat) {
+    public convenience init(hex:UInt64, alpha:CGFloat) {
         let r: CGFloat = CGFloat((hex & 0xFF0000) >> 16) / 255.0
         let g: CGFloat = CGFloat((hex & 0x00FF00) >> 8) / 255.0
         let b: CGFloat = CGFloat(hex & 0x0000FF) / 255.0
         self.init(red:r,green: g, blue:b, alpha:alpha)
+    }
+}
+
+extension String {
+    
+    public var color: UIColor {
+        guard let hex = self.hexValue else { return .white }
+        return UIColor(hex: hex)
+    }
+    
+    public func color(_ alpha: CGFloat) -> UIColor {
+        guard let hex = self.hexValue else { return .white }
+        return UIColor(hex: hex, alpha: alpha)
+    }
+    
+    public var hexValue: UInt64? {
+        var hexString = self
+        if hasPrefix("#") {
+            hexString = hexString.replacingOccurrences(of: "#", with: "")
+        }
+        if hasPrefix("0x") {
+            hexString = hexString.replacingOccurrences(of: "0x", with: "")
+        }
+        guard hexString.count == 6 else {
+            YFLog("It seems the hex value is illegal, 貌似这个值不太对啊")
+            return nil
+        }
+        let scanner = Scanner(string: hexString)
+        var colorValue: UInt64 = 0
+        scanner.scanHexInt64(&colorValue)
+        return colorValue
     }
 }
