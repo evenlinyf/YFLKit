@@ -35,20 +35,5 @@ extension YFLWrapper where Base: UIButton {
         return self
     }
     
-    @discardableResult
-    public func backgroundColor(_ color: UIColor?) -> Self {
-        if let color = color {
-            base.backgroundColor = color
-        }
-        return self
-    }
-    
-    @discardableResult
-    public func frame(_ frame: CGRect?) -> Self {
-        if let frame = frame {
-            base.frame = frame
-        }
-        return self
-    }
 }
 

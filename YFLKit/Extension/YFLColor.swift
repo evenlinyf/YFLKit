@@ -45,12 +45,18 @@ extension UIColor {
 extension String {
     
     public var color: UIColor {
-        guard let hex = self.hexValue else { return .white }
+        guard let hex = self.hexValue else {
+            if let colorSet = UIColor(named: self) {
+                return colorSet
+            } else {
+                return .red
+            }
+        }
         return UIColor(hex: hex)
     }
     
     public func color(_ alpha: CGFloat) -> UIColor {
-        guard let hex = self.hexValue else { return .white }
+        guard let hex = self.hexValue else { return .red }
         return UIColor(hex: hex, alpha: alpha)
     }
     
@@ -66,6 +72,7 @@ extension String {
             YFLog("It seems the hex value is illegal, 貌似这个值不太对啊")
             return nil
         }
+        
         let scanner = Scanner(string: hexString)
         var colorValue: UInt64 = 0
         scanner.scanHexInt64(&colorValue)

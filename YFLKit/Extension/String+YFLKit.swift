@@ -15,6 +15,10 @@ extension String {
     var localized: String {
         return NSLocalizedString(self, comment: "")
     }
+    
+    func localized(_ args: CVarArg...) -> String {
+        return String(format: localized, arguments: args)
+    }
 }
 
 extension YFLWrapper where Base == String {

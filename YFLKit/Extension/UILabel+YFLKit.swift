@@ -28,12 +28,6 @@ extension YFLWrapper where Base: UILabel {
     }
     
     @discardableResult
-    public func backgroundColor(_ color: UIColor?) -> Self {
-        base.backgroundColor = color
-        return self
-    }
-    
-    @discardableResult
     public func numberOfLines(_ count: Int) -> Self {
         base.numberOfLines = count
         return self

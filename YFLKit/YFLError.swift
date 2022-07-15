@@ -26,7 +26,7 @@ public enum YFLError: Error {
 
 extension YFLError.IAPErrorReason {
     
-    var errorMessage: String {
+    public var errorMessage: String {
         switch self {
         case .canNotMakePayments: return "Can not make payments"
         case .receiptURL(info: let info): return info ?? "receiptURL error"

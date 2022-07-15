@@ -224,4 +224,10 @@ extension YFLWrapper where Base: UIView {
         return self
     }
     
+    @discardableResult
+    public func backgroundColor(_ color: UIColor?) -> Self {
+        base.backgroundColor = color
+        return self
+    }
+    
 }
