@@ -22,11 +22,11 @@ public class Column: UIStackView {
         for child in self.arrangedSubviews {
             if child is UILabel { continue }
             child.snp.makeConstraints { make in
-                if child.yfl.width > 0 {
-                    make.width.equalTo(child.yfl.width)
+                if child.width > 0 {
+                    make.width.equalTo(child.width)
                 }
-                if child.yfl.height > 0 {
-                    make.height.equalTo(child.yfl.height)
+                if child.height > 0 {
+                    make.height.equalTo(child.height)
                 }
             }
         }

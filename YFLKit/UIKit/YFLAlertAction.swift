@@ -24,8 +24,9 @@ public class YFLAlertAction: NSObject {
         button.yfl
             .title(title)
             .image(image)
-            .image(image, state: .highlighted)
-            .font(size: 14, color: handler == nil ? UIColor.lightGray : UIColor.darkGray)
+            .image(image, for: .highlighted)
+            .font(size: 14)
+            .color(handler == nil ? UIColor.lightGray : UIColor.darkGray)
         self.init(button: button, handler: handler)
     }
 }

@@ -13,6 +13,8 @@ public class Container: UIView {
         case left
         case center
         case right
+        case top
+        case bottom
     }
     
     private(set) var child: UIView?
@@ -43,6 +45,16 @@ public class Container: UIView {
                 make.top.equalTo(edge.top)
                 make.bottom.equalTo(-edge.bottom)
                 make.right.equalTo(-edge.right)
+            case .top:
+                make.left.equalTo(edge.left)
+                make.top.equalTo(edge.top)
+                make.right.equalTo(-edge.right)
+                make.bottom.lessThanOrEqualTo(-edge.bottom)
+            case .bottom:
+                make.left.equalTo(edge.left)
+                make.top.greaterThanOrEqualTo(edge.top)
+                make.right.equalTo(-edge.right)
+                make.bottom.equalTo(-edge.bottom)
             }
         }
     }

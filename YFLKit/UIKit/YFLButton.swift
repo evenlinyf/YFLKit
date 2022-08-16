@@ -20,9 +20,17 @@ public class YFLButton: UIButton {
         return imageView
     }()
     
+    
+    /// 圆角
     public var radius: CGFloat?
+    
+    /// 图片和文字的距离
     public var space: CGFloat = 3
+    
+    /// 边框颜色
     public var borderColor: UIColor?
+    
+    /// (图片和文字)的外边距
     public var edgeInsets: UIEdgeInsets?
     
     public var buttonWidth: CGFloat {
@@ -121,9 +129,9 @@ public class YFLButton: UIButton {
             }
             break
         case .full:
-            self.yfl.makeRoundCorner(radius ?? self.yfl.height/2)
+            self.yfl.makeRoundCorner(radius ?? self.height/2)
         case .circle:
-            self.yfl.setCornerRadius(radius ?? self.yfl.height/2)
+            self.yfl.setCornerRadius(radius ?? self.height/2)
             self.layer.borderColor = borderColor != nil ? borderColor!.cgColor : self.currentTitleColor.cgColor
             self.layer.borderWidth = 1
         }

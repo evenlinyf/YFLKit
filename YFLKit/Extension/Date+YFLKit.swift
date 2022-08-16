@@ -30,7 +30,7 @@ extension YFLWrapper where Base == Date {
         return "\(time)"
     }
     
-    /// 毫秒时间戳
+    /// 毫秒时间戳 million second time stamp
     public var msecTimeStamp: String {
         let timeInterval: TimeInterval = base.timeIntervalSince1970
         let milliSec = CLongLong(round(timeInterval * 1000))

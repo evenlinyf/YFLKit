@@ -42,6 +42,8 @@ public class YFLPagingLoad: NSObject {
         self.size = size
     }
     
+    private override init() {}
+    
     /// 设置返回的Models
     public func setModels<T>(models: inout [T], with sModels: [T]) {
         self.status = sModels.count < size ? (sModels.count == 0 ? (isRefresh ? .empty : .loadAll) : .loadAll) : .canLoadMore

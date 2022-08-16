@@ -244,6 +244,7 @@ extension YFLDevice {
         return NSLocale.current.identifier
     }
     
+    /// 语言代码
     public static var languageCode: String {
         if let code = NSLocale.current.languageCode {
             if code == "zh" {
@@ -266,10 +267,12 @@ extension YFLDevice {
         return ""
     }
     
+    /// 是否是中国大陆
     public static var isChinaMainland: Bool {
         return languageCode == "zh"
     }
     
+    /// 是否是英文
     public static var isEnglish: Bool {
         return languageCode.contains("en")
     }

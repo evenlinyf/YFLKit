@@ -43,8 +43,8 @@ public class YFLTextField: UITextField {
         if needUnderline {
             let line = UIBezierPath()
             line.lineWidth = 0.7
-            line.move(to: CGPoint(x: 0, y: self.yfl.height))
-            line.addLine(to: CGPoint(x: self.yfl.width, y: self.yfl.height))
+            line.move(to: CGPoint(x: 0, y: self.height))
+            line.addLine(to: CGPoint(x: self.width, y: self.height))
             underlineColor.setStroke()
             line.stroke()
         }

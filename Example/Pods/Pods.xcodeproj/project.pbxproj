@@ -322,11 +322,11 @@
 			isa = PBXGroup;
 			children = (
 				B0ADC3A25484B1790A361A5A932126A3 /* Center.swift */,
+				1E55EE6E3393F1ABBCF6405BA0452892 /* Row.swift */,
 				E4969EFB976E7ABA13FBDD788D9FC389 /* Column.swift */,
 				6A01579446220734077B04893304BDE1 /* Container.swift */,
 				3E5D7164F53DF7C64CC8945A91E4461C /* Expanded.swift */,
 				A3C117A9ECC0FBC88A5E5FB09AA0FF6D /* Gallery.swift */,
-				1E55EE6E3393F1ABBCF6405BA0452892 /* Row.swift */,
 			);
 			name = FlutterStyle;
 			path = YFLKit/FlutterStyle;

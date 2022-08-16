@@ -51,12 +51,13 @@ public struct YFLAuthManager {
     
     
     /// 打开系统设置页面
-    public func openSystemSetting() {
+    public static func openSystemSetting() {
         guard let systemSettingUrl = URL(string: UIApplication.openSettingsURLString) else {
             return
         }
         if UIApplication.shared.canOpenURL(systemSettingUrl) {
-            UIApplication.shared.openURL(systemSettingUrl)
+//            UIApplication.shared.openURL(systemSettingUrl)
+            UIApplication.shared.open(systemSettingUrl, options: [:], completionHandler: nil)
         }
     }
     

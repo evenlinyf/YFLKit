@@ -12,13 +12,15 @@ import CommonCrypto
 extension String: YFLCompatibleValue {}
 
 extension String {
-    var localized: String {
+    
+    public var localized: String {
         return NSLocalizedString(self, comment: "")
     }
     
-    func localized(_ args: CVarArg...) -> String {
+    public func localized(_ args: CVarArg...) -> String {
         return String(format: localized, arguments: args)
     }
+    
 }
 
 extension YFLWrapper where Base == String {

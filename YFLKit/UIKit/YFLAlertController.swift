@@ -153,14 +153,14 @@ public class YFLAlertController: UIViewController {
         super.viewDidLoad()
         if self.contentWidth == nil {
             contentWidth = position.width
-            if let cWidth = contentView?.yfl.width {
+            if let cWidth = contentView?.width {
                 if cWidth > 0 {
                     contentWidth = cWidth + contentEdgeInsets.left + contentEdgeInsets.right
                 } else {
-                    contentView?.yfl.width = contentWidth!
+                    contentView?.width = contentWidth!
                 }
             } else {
-                contentView?.yfl.width = contentWidth!
+                contentView?.width = contentWidth!
             }
         }
         configMaskView()
@@ -199,7 +199,10 @@ public class YFLAlertController: UIViewController {
         if let cancelImage = YFLAlertConfig.cancelImage {
             cancelButton.setImage(cancelImage, for: .normal)
         } else {
-            cancelButton.yfl.title("×").font(size: 14, color: .lightGray)
+            cancelButton.yfl
+                .title("×")
+                .font(size: 14)
+                .color(.lightGray)
         }
         alertContentView.addSubview(cancelButton)
         cancelButton.snp.makeConstraints { make in
@@ -359,7 +362,7 @@ extension YFLAlertController {
         }
         
         view.addSubview(alertContentView)
-        alertContentView.yfl.width = contentWidth!
+        alertContentView.width = contentWidth!
         if let cusPosition = customPosition {
             alertContentView.snp.makeConstraints { make in
                 make.width.equalTo(contentWidth!)
@@ -379,7 +382,7 @@ extension YFLAlertController {
         } else {
             switch position {
             case .golden:
-                let centerYOffset: CGFloat = view.yfl.height * (0.5 - 1 + 0.618)
+                let centerYOffset: CGFloat = view.height * (0.5 - 1 + 0.618)
                 alertContentView.snp.makeConstraints { make in
                     make.centerX.equalToSuperview()
                     make.width.equalTo(contentWidth!)
@@ -396,7 +399,7 @@ extension YFLAlertController {
                     //为了切掉圆角...
                     make.bottom.equalTo(10)
                     make.left.right.equalToSuperview()
-                    make.width.equalTo(self.view.yfl.width)
+                    make.width.equalTo(self.view.width)
                 }
             }
         }
@@ -465,7 +468,7 @@ extension YFLAlertController {
                     actionContent.addSubview(horiLineView)
                     horiLineView.snp.makeConstraints { make in
                         make.left.top.right.equalTo(0)
-                        make.height.equalTo(horiLineView.yfl.height)
+                        make.height.equalTo(horiLineView.height)
                     }
                     button1.snp.makeConstraints { make in
                         make.left.equalToSuperview()
@@ -480,7 +483,7 @@ extension YFLAlertController {
                         make.left.equalTo(button1.snp.right)
                         make.top.equalTo(horiLineView.snp.bottom)
                         make.bottom.equalToSuperview()
-                        make.width.equalTo(vertiLine.yfl.width)
+                        make.width.equalTo(vertiLine.width)
                         make.height.equalTo(actionHeight)
                     }
                     
@@ -508,7 +511,7 @@ extension YFLAlertController {
                 actionContent.addSubview(line)
                 line.snp.makeConstraints { make in
                     make.left.right.equalToSuperview()
-                    make.height.equalTo(line.yfl.height)
+                    make.height.equalTo(line.height)
                     if let topView = topView {
                         make.top.equalTo(topView.snp.bottom)
                     } else {
@@ -606,7 +609,8 @@ extension YFLAlertController {
 
         let confirmBtn = YFLButton(style: .full)
         confirmBtn.yfl
-            .font(size: 14, color: .white)
+            .font(size: 14)
+            .color(.white)
             .backgroundColor(YFLAlertConfig.themeColor)
             .title(actionTitle)
         

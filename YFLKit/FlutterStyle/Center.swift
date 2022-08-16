@@ -22,11 +22,11 @@ public class Center: UIView {
             make.center.equalToSuperview()
             make.top.left.greaterThanOrEqualToSuperview()
             make.right.bottom.lessThanOrEqualToSuperview()
-            if child.yfl.width > 0 {
-                make.width.equalTo(child.yfl.width)
+            if child.width > 0 {
+                make.width.equalTo(child.width)
             }
-            if child.yfl.height > 0 {
-                make.height.equalTo(child.yfl.height)
+            if child.height > 0 {
+                make.height.equalTo(child.height)
             }
         }
     }

@@ -8,51 +8,51 @@
 import UIKit
 import Foundation
 
-extension YFLWrapper where Base: UIView {
+extension UIView {
     
     public var left:CGFloat {
         get {
-            return base.frame.origin.x
+            return self.frame.origin.x
         }
         set {
-            var frame = base.frame
+            var frame = self.frame
             frame.origin.x = newValue
-            base.frame = frame
+            self.frame = frame
         }
     }
     
     public var top:CGFloat {
         get {
-            return base.frame.origin.y
+            return self.frame.origin.y
         }
         set {
-            var frame = base.frame
+            var frame = self.frame
             frame.origin.y = newValue
-            base.frame = frame
+            self.frame = frame
         }
     }
     
     public var width:CGFloat {
         get {
-            return base.frame.size.width
+            return self.frame.size.width
         }
         
         set {
-            var frame = base.frame
+            var frame = self.frame
             frame.size.width = newValue
-            base.frame = frame
+            self.frame = frame
         }
     }
     
     public var height:CGFloat {
         get {
-            return base.frame.size.height
+            return self.frame.size.height
         }
         
         set {
-            var frame = base.frame
+            var frame = self.frame
             frame.size.height = newValue
-            base.frame = frame
+            self.frame = frame
         }
     }
     
@@ -70,27 +70,31 @@ extension YFLWrapper where Base: UIView {
     
     public var centerX:CGFloat {
         get {
-            return base.center.x
+            return self.center.x
         }
         
         set {
-            var center = base.center
+            var center = self.center
             center.x = newValue
-            base.center = center
+            self.center = center
         }
     }
     
     public var centerY:CGFloat {
         get {
-            return base.center.y
+            return self.center.y
         }
         
         set {
-            var center = base.center
+            var center = self.center
             center.y = newValue
-            base.center = center
+            self.center = center
         }
     }
+}
+
+
+extension YFLWrapper where Base: UIView {
     
     public func removeAllSubviews() {
         while base.subviews.count > 0 {
@@ -108,13 +112,13 @@ extension YFLWrapper where Base: UIView {
     }
     
     //MARK: Border
-    public func setCornerRadius(_ radius: CGFloat) {
+    public func setCornerRadius(_ radius: CGFloat, masksToBounds: Bool = true) {
         base.layer.cornerRadius = radius
-        base.layer.masksToBounds = true
+        base.layer.masksToBounds = masksToBounds
     }
     
-    public func setBorder(color: UIColor, radius: CGFloat, width: CGFloat = 1) {
-        self.setCornerRadius(radius)
+    public func setBorder(color: UIColor, radius: CGFloat, width: CGFloat = 1, masksToBounds: Bool = true) {
+        self.setCornerRadius(radius, masksToBounds: masksToBounds)
         base.layer.borderColor = color.cgColor
         base.layer.borderWidth = width
     }

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YFLKit'
-  s.version          = '0.1.11'
+  s.version          = '1.0.0'
   s.summary          = 'A simple library for build a simple app.'
 
 # This description is used to generate tags and improve search results.
