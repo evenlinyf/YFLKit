@@ -7,11 +7,11 @@
 
 import Foundation
 
-enum APIMethod {
+public enum APIMethod {
     case get, post, upload
 }
 
-protocol APIProtocol {
+public protocol APIProtocol {
     var path: String { get }
     var baseUrl: URL { get }
     var middlePath: String { get }

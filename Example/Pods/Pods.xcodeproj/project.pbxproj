@@ -73,6 +73,7 @@
 		D1358B6D159F763905F528B0C9C1DD3C /* YFLObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBC3EE8C576187402B943CD8FC21140 /* YFLObservable.swift */; };
 		D30EE94F28322A0D0062D952 /* UITextField+YFLKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30EE94E28322A0D0062D952 /* UITextField+YFLKit.swift */; };
 		D31ECD71283B871B00D54810 /* YFLAlertConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31ECD70283B871B00D54810 /* YFLAlertConfig.swift */; };
+		D354F6D028ADDD1F00CC222B /* YFLAppStoreNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D354F6CF28ADDD1F00CC222B /* YFLAppStoreNavigator.swift */; };
 		D394E8322833A9C40030B767 /* NSObject+YFLKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D394E8312833A9C40030B767 /* NSObject+YFLKit.swift */; };
 		D472CFED0C28DB8258BB4E132F4A7EA4 /* YFLKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 705E5948E3D8DBE8C4471EA2ED61EEC3 /* YFLKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D78F6A95A088F7E619745556DAFE9E0A /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887F5BC85E664CAF1EAD58DB6EF027D /* ConstraintMakerRelatable.swift */; };
@@ -201,6 +202,7 @@
 		D0D8610217E033F12A628571FD3D1684 /* Typealiases.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Typealiases.swift; path = Source/Typealiases.swift; sourceTree = "<group>"; };
 		D30EE94E28322A0D0062D952 /* UITextField+YFLKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+YFLKit.swift"; sourceTree = "<group>"; };
 		D31ECD70283B871B00D54810 /* YFLAlertConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YFLAlertConfig.swift; sourceTree = "<group>"; };
+		D354F6CF28ADDD1F00CC222B /* YFLAppStoreNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YFLAppStoreNavigator.swift; sourceTree = "<group>"; };
 		D394E8312833A9C40030B767 /* NSObject+YFLKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+YFLKit.swift"; sourceTree = "<group>"; };
 		D3DD21F59E9ABB6CFA8B14FAEE0B52DA /* ConstraintMakerPriortizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerPriortizable.swift; path = Source/ConstraintMakerPriortizable.swift; sourceTree = "<group>"; };
 		D4D44F77CE9061F96FA9D6F92F92701F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -429,6 +431,7 @@
 				8995BAD6242EAEDBA9856BF52BED9807 /* YFLAudioManager.swift */,
 				B1ADC370F9A168A8D165EE676467D45B /* YFLAuthManager.swift */,
 				0AF1496D5D2D5E4B408591A654B3E14B /* YFLInAppPurchase.swift */,
+				D354F6CF28ADDD1F00CC222B /* YFLAppStoreNavigator.swift */,
 			);
 			name = Manager;
 			path = YFLKit/Manager;
@@ -682,6 +685,7 @@
 				E2200C3ABC22D1DB516DEF746A2F9DDC /* YFLFeedBack.swift in Sources */,
 				1EF4CCD533294D7FE7B8A587FA892C35 /* YFLInAppPurchase.swift in Sources */,
 				44F7B53A70C1F8E3E3B9E778240F85AF /* YFLKit.swift in Sources */,
+				D354F6D028ADDD1F00CC222B /* YFLAppStoreNavigator.swift in Sources */,
 				D31ECD71283B871B00D54810 /* YFLAlertConfig.swift in Sources */,
 				F1ED392C8AB42094FBC1698D15D89AE0 /* YFLKit-dummy.m in Sources */,
 				D1358B6D159F763905F528B0C9C1DD3C /* YFLObservable.swift in Sources */,
