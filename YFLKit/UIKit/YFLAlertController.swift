@@ -51,7 +51,6 @@ public class YFLAlertController: UIViewController {
     public var customPosition: UIEdgeInsets?
     
     private var tapGesture: UITapGestureRecognizer?
-    private var swipeGesture: UISwipeGestureRecognizer?
     
     /// 透明黑色背景视图
     private let maskView: UIView = UIView()
@@ -294,7 +293,7 @@ extension YFLAlertController {
         
         //是否需要点击黑色背景退出弹框
         if self.tapToDismiss {
-            self.tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissAction))
+            self.tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissAnimatedAction))
             if let tap = tapGesture {
                 maskView.addGestureRecognizer(tap)
             }
@@ -406,15 +405,6 @@ extension YFLAlertController {
         
         alertContentView.layer.cornerRadius = self.cornerRadius ?? YFLAlertConfig.cornerRadius
         alertContentView.layer.masksToBounds = false
-        
-        if self.tapToDismiss {
-            self.swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(dismissAnimatedAction))
-            swipeGesture?.direction = .down
-            if let swipe = swipeGesture {
-                swipe.direction = .down
-                alertContentView.addGestureRecognizer(swipe)
-            }
-        }
     }
     
     //Actions 约束
@@ -661,5 +651,34 @@ extension YFLAlertController {
             alert.addAction(puAction)
         }
         alert.showInViewController(vc)
+    }
+}
+
+//MARK: move with finger
+extension YFLAlertController {
+    
+    public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        alertContentView.transform = .identity
+    }
+    
+    public override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let touch = touches.first else { return }
+        let currentLocation = touch.location(in: view)
+        let previousLocation = touch.previousLocation(in: view)
+        var x = currentLocation.x - previousLocation.x
+        var y = currentLocation.y - previousLocation.y
+        if case .bottom = position {
+            x = 0
+            if y < 0 { y = 0 }
+        }
+        
+        alertContentView.transform = CGAffineTransformTranslate(alertContentView.transform, x, y)
+        if y > 36 {
+            dismissAnimatedAction()
+        }
+    }
+    
+    public override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        alertContentView.transform = .identity
     }
 }
