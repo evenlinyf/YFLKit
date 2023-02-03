@@ -229,6 +229,12 @@ extension YFLWrapper where Base: UIView {
     }
     
     @discardableResult
+    public func frame(_ frame: CGRect) -> Self {
+        base.frame = frame
+        return self
+    }
+    
+    @discardableResult
     public func backgroundColor(_ color: UIColor?) -> Self {
         base.backgroundColor = color
         return self
